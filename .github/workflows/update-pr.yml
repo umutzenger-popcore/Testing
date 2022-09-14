@@ -1,0 +1,17 @@
+name: "Update Pull Request"
+on: pull_request
+
+jobs:
+  update_pr:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: tzkhan/pr-update-action@v2
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        base-branch-regex: '[a-z\d-_.\\/]+'
+        head-branch-regex: '/[0-9]+/'
+        title-template: '[%headbranch%] '
+        body-template: |
+          Merging into '%basebranch%'
+          [Ticket](https://popcore.atlassian.net/browse/GKD-%headbranch%)
+        body-uppercase-base-match: false
