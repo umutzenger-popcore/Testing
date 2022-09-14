@@ -10,7 +10,7 @@ jobs:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         base-branch-regex: '[a-z\d-_.\\/]+'
         head-branch-regex: '[0-9]+'
-        title-template: '[%headbranch%] '
+        title-template: 'GKD-%headbranch%: '
         body-template: |
           Merging into '%basebranch%'
           [Ticket](https://popcore.atlassian.net/browse/GKD-%headbranch%)
