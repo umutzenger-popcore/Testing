@@ -15,4 +15,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: umutzenger-popcore/pr-add-reviewer-action@v1.0 # Uses an action in the root directory
         with:
-          reviewers: "aleksandr-popcore"
+          reviewers: "umutzenger-popcore"
